@@ -5,6 +5,21 @@ import axios from 'axios';
 
 class Forms extends Component {
 
+  state = {
+    loadingText: '',
+    coin: '',
+    address: '',
+    signature: '',
+  };
+
+  onFormSubmit = async (event) => {
+    event.preventDefault();
+
+    this.setState({
+      loadingText: 'Verifying...',
+    })
+  }
+
 
     render() {
       return(
