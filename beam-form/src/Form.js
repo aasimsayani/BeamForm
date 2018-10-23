@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Card, Container, Dimmer, Form, Loader, Message, Segment } from 'semantic-ui-react';
-import axios from 'axios';
+import { Card, Container, Dimmer, Form, Loader, Segment } from 'semantic-ui-react';
+
 
 
 class Forms extends Component {
@@ -33,22 +33,24 @@ class Forms extends Component {
             <Form onSubmit ={this.onFormSubmit}>
               <Form.Field required>
                 <label>Coin</label>
-                <input value={this.state.coin} disabled />
+                <input value={this.state.coin}  />
               </Form.Field>
               <Form.Field required>
                 <label>Address</label>
-                <input value={this.state.address} disabled />
+                <input value={this.state.address}/>
               </Form.Field>
               <Form.Field required>
                 <label>Signature</label>
-                <input value={this.state.signature} disabled />
+                <input value={this.state.signature}  />
               </Form.Field>
               <Form.Button primary disabled={this.state.disabled}>Submit</Form.Button>
              </Form>
-             </Card.Content>
-             </Card>
-             </Segment>
-            </Container>
+               </Card.Content>
+              </Card>
+           </Segment>
+        </Container>
      );
   };
 };
+
+export default Forms;

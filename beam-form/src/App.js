@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Form from './Form'
+import Forms from './Form';
 import { Container, Message } from 'semantic-ui-react';
 import {
   Route,
@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Form />
+        <Forms />
       </Container>
     );
   }
