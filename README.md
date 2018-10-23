@@ -12,9 +12,9 @@ Automate the current process for Beam where a user uploads their information, an
 
 ## Stack
 
--React 
--mySQL
--WordPress
+- React 
+- mySQL
+- WordPress
 
 ## Data Workflow 
 
@@ -22,4 +22,4 @@ Automate the current process for Beam where a user uploads their information, an
 
 ## Documentation around API Calls and Database Structure
 
- 
+
