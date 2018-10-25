@@ -4,7 +4,7 @@ import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import config from './webpack.config.js';
+import config from '../webpack.config.js';
 import { apolloServer } from 'apollo-server';
 import Schema from './schema/typeDefinitions';
 import Resolvers from './schema/resolveFunctions';
