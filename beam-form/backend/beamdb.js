@@ -16,20 +16,20 @@ connection.connect(function(err) {
   console.log('Connected');
 });
 
-// $query = 'SELECT * from wp_user LIMIT 10';
+$query = 'SELECT * from users_master LIMIT 10';
 
-// connection.query($query, function(err, rows, fields) {
-//   if(err){
-//     console.log("An error occured performing the query.");
-//     return;
-//   }
+connection.query($query, function(err, rows, fields) {
+  if(err){
+    console.log("An error occured performing the query.");
+    return;
+  }
 
-//   console.log("Query successfully executed:", rows);
-// });
+  console.log("Query successfully executed:", rows);
+});
 
-// connection.end(function(){
+connection.end(function(){
 
-// });
+});
 
 
 

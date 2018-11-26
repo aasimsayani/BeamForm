@@ -33,7 +33,19 @@ class Forms extends Component {
       address: address
     });
     console.log(this.state.data)
+    fetch(`http://localhost:3000/user/add?username=${this.state.data.username}&password=${this.state.data.password}&email=${this.state.data.email}&coin=${this.state.data.coin}&address=${this.state.data.address}&amount=${this.state.data.amount}&signature=${encodeURIComponent(this.state.data.signature)}`)
+    .catch( err => console.log(err))
   }
+
+  coinOptions = () => {
+
+  }
+
+  // addUser = () => {
+  //   const { data } = this.state
+  //   fetch(`http://localhost:40000/user/add?username={data.username}&password={data.password}&email={data.email}&coin={data.coin}&address={data.address}&amount={data.amount}&signature={data.signature}`)
+  //   .catch( err = console.log(err))
+  // }
 
     render() {
       const { data } = this.state
@@ -63,6 +75,7 @@ class Forms extends Component {
               <Form.Field required>
                 <label>Coin</label>
                 <input value={data.coin} name='coin' onChange={this.handleChange}/>
+                <Dropdown placeholder='Select your coin' fluid selection options={coinOptions} />
               </Form.Field>
               <Form.Field required>
                 <label>Amount</label>
